@@ -1,14 +1,17 @@
 ## Property Identifier
 
-```Install dependencies
+```
+Install dependencies
 `yarn` or `yarn install`
 ```
 
-```Development
+```
+Development
 `yarn start`
 ```
 
-```Production
+```
+Production
 `yarn build`
 ```
 
