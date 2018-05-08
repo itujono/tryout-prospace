@@ -1,15 +1,18 @@
 ## Property Identifier
 
-Install dependencies
-`yarn`
+```Install dependencies
+`yarn` or `yarn install`
+```
 
-Development
+```Development
 `yarn start`
+```
 
-Production
+```Production
 `yarn build`
+```
 
-Visit
+Visit localhost to preview
 `http://localhost:8080/`
 
 
