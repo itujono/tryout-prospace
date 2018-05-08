@@ -1,11 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App'
+import './styles/style.scss'
+import rootReducer from './redux/reducers'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+import {BrowserRouter, Switch} from 'react-router-dom'
 
-const title = 'My Minimal React Webpack Babel Setup';
+
+const store = createStore(rootReducer)
+
+
+
 
 ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
-);
+    <Provider store={store}><BrowserRouter><Switch><App /></Switch></BrowserRouter></Provider>,
+    document.getElementById('app')
+)
 
 module.hot.accept();

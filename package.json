@@ -1,10 +1,11 @@
 {
-  "name": "minimal-react-webpack-babel-setup",
+  "name": "property-sg",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack --mode production",
     "test": "echo \"No test specified\" && exit 0"
   },
   "keywords": [],
@@ -22,7 +23,16 @@
   },
   "dependencies": {
     "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "reactbulma": "^3.0.4",
+    "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0"
   }
 }

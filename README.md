@@ -1,21 +1,29 @@
-# minimal-react-webpack-babel-setup
+## Property Identifier
 
-[![Build Status](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup.svg?branch=master)](https://travis-ci.org/rwieruch/minimal-react-webpack-babel-setup)
+Install dependencies
+`yarn`
 
-Read more about it: [The Minimal React Webpack Babel Setup](https://www.robinwieruch.de/minimal-react-webpack-babel-setup/)
+Development
+`yarn start`
 
-## Features
+Production
+`yarn build`
+
+Visit
+`http://localhost:8080/`
+
+
+
+## What's included
 
 * React 16
 * Webpack 4
 * Babel
-* Staging ES Next Features
 * Hot Module Replacement
 
-## Installation
 
-* `git clone git@github.com:rwieruch/minimal-react-webpack-babel-setup.git`
-* cd minimal-react-webpack-babel-setup
-* npm install
-* npm start
-* visit `http://localhost:8080/`
+
+## What's undone
+
+* Populating details on each company that gets selected/clicked
+* Form validation that is still pretty basic, actually

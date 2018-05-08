@@ -1,0 +1,59 @@
+$defaultSize: 1em;
+$darken: #444;
+$reddish: #f54545;
+
+
+
+body {
+    font-size: $defaultSize;
+}
+
+.darken {
+    color: $darken !important;
+    font-weight: bold;
+}
+
+.title {
+    &.is-4 {
+        margin-bottom: $defaultSize;
+    } 
+}
+
+.select {
+    select {
+        width: 100%;
+    } 
+}
+
+.company-list, .office-list {
+    align-items: stretch;
+    flex-wrap: wrap;
+    .card {
+        &.companies, &.office {
+            flex: 0 1 30%;
+            margin-bottom: $defaultSize * 1.5;
+            transition: all .3s ease;
+            &:hover {
+                transform: translateY(-10px)
+            }
+            li {
+                margin-bottom: $defaultSize;
+                h4 {
+                    font-weight: bold;
+                }
+            }
+        }
+        &:hover {
+            .delete {
+                display: inline-block;
+            }
+        }
+        .delete {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: $reddish;
+            display: none;
+        }
+    }
+}
