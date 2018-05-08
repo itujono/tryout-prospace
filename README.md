@@ -1,18 +1,18 @@
 ## Property Identifier
 
+### Install dependencies
 ```
-Install dependencies
-`yarn` or `yarn install`
-```
-
-```
-Development
-`yarn start`
+yarn or yarn install
 ```
 
+### Development
 ```
-Production
-`yarn build`
+yarn start
+```
+
+### Production
+```
+yarn build
 ```
 
 Visit localhost to preview
