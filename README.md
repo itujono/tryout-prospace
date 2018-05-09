@@ -23,8 +23,10 @@ Visit localhost to preview
 ## What's included
 
 * React 16
+* Redux 5
 * Webpack 4
 * Babel
+* React Bulma
 * Hot Module Replacement
 
 
