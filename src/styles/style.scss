@@ -40,6 +40,9 @@ body {
 
 .company-details {
     margin-bottom: 2 * $defaultSize;
+    li {
+        margin-bottom: $defaultSize;
+    }
 }
 
 .company-list, .office-list {

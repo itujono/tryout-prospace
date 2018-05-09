@@ -20,7 +20,7 @@ class CreateCompany extends React.Component {
 
 		const name = e.target.elements.name.value
 		const address = e.target.elements.address.value
-		const revenue = e.target.elements.revenue.value
+		const revenue = `$${e.target.elements.revenue.value}`
 		const code = e.target.elements.code.value
 		const phone = `${code} ${e.target.elements.phone.value}`
 
