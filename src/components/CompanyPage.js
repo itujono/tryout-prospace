@@ -9,8 +9,6 @@ import Company from './Company';
 
 const CompanyPage = (props) => {
 
-    console.log(props.companies)
-
     return (
         <Section>
             <div>

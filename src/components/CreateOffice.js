@@ -15,7 +15,7 @@ class CreateOffice extends React.Component {
     createNewOffice(e) {
         e.preventDefault()
 
-        const name = e.target.elements.name.value
+        const name = `${e.target.elements.name.value} Office`
         const latitude = e.target.elements.latitude.value
         const longitude = e.target.elements.longitude.value
         const startdate = e.target.elements.startdate.value
