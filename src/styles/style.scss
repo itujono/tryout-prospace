@@ -28,9 +28,14 @@ body {
 }
 
 .select {
+    display: block !important;
     select {
         width: 100%;
     } 
+}
+
+.notification {
+    position: absolute;
 }
 
 .company-details {

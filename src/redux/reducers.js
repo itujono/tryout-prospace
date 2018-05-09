@@ -1,6 +1,5 @@
 import companies from '../data/companies'
 import {combineReducers} from 'redux'
-import {reducer as formReducer} from 'redux-form'
 
 
 
@@ -19,7 +18,7 @@ const officeReducer = (state = [], action) => {
     }
 }
 
-const companyReducer = (state = companies, action) => {
+const companyReducer = (state = [], action) => {
     switch (action.type) {
         case 'REMOVE_COMPANY':
             return [...state.slice(0, action.index), ...state.slice(action.index + 1)]
@@ -30,7 +29,7 @@ const companyReducer = (state = companies, action) => {
     }
 }
 
-const rootReducer = combineReducers({companyReducer, officeReducer, form: formReducer})
+const rootReducer = combineReducers({companyReducer, officeReducer})
 
 
 export default rootReducer
