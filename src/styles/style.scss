@@ -13,16 +13,28 @@ body {
     font-weight: bold;
 }
 
+.main-title {
+    text-align: center !important;
+}
+
 .title {
     &.is-4 {
         margin-bottom: $defaultSize;
     } 
 }
 
+.office-container {
+    margin-top: 2 * $defaultSize;
+}
+
 .select {
     select {
         width: 100%;
     } 
+}
+
+.company-details {
+    margin-bottom: 2 * $defaultSize;
 }
 
 .company-list, .office-list {

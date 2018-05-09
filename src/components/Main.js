@@ -25,7 +25,7 @@ class Main extends React.Component {
                 <Hero.Body>
                     <Container>
 
-                        <Link to="/"><Title>Selamat Datang!</Title></Link>
+                        <Link to="/"><Title className="main-title">Selamat Datang!</Title></Link>
 
                         <Route exact path="/" render={() => (
                             <Section>
@@ -36,8 +36,6 @@ class Main extends React.Component {
                                 <Companies {...this.props} />
                             </Section>
                         )} />
-
-                        <hr />
 
                         <Route path="/details/:name" render={() => (
                             <CompanyPage {...this.props} />

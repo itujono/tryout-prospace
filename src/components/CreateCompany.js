@@ -1,5 +1,5 @@
 import React from "react";
-import {Field, Control, Input, Button, Title, Notification} from 'reactbulma'
+import {Field, Control, Input, Button, Title, Notification, Delete} from 'reactbulma'
 import {Link} from 'react-router-dom';
 import CompanyPage from './CompanyPage'
 
@@ -7,6 +7,11 @@ class CreateCompany extends React.Component {
 	constructor() {
 		super()
 		this.createNewCompany = this.createNewCompany.bind(this)
+		this.closeMessage = this.closeMessage.bind(this)
+
+		this.state = {
+			error: false
+		}
 
 	}
 
@@ -25,6 +30,7 @@ class CreateCompany extends React.Component {
 
 		if (name && address && revenue && phone) {
 			this.props.addCompany(newCompany)
+			this.setState(() => ({ error: false }))
 			alert("You've successfully added a new company")
 			e.target.elements.name.value = ''
 			e.target.elements.address.value = ''
@@ -32,9 +38,13 @@ class CreateCompany extends React.Component {
 			e.target.elements.code.value = ''
 			e.target.elements.phone.value = ''
 		} else {
-			alert("Please fill up all the fields.")
+			this.setState(() => ({ error: true }))
 		}
 	}
+
+	closeMessage() {
+        this.setState(() => ({ error: false }))
+    }
 
 	render() {
 		return (
@@ -81,6 +91,11 @@ class CreateCompany extends React.Component {
 							<Button warning>Create</Button>
 						</Control>
 					</Field>
+					{
+						this.state.error && (
+							<Notification danger><Delete onClick={this.closeMessage}/ >Please fill up all the fields.</Notification>
+						)
+					}
 				</form>
 			</div>
 		);

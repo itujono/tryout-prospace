@@ -1,10 +1,15 @@
 import React from "react";
-import {Field, Control, Input, Button, Title} from 'reactbulma'
+import {Field, Control, Input, Button, Title, Notification, Delete} from 'reactbulma'
 
 class CreateOffice extends React.Component {
     constructor() {
         super()
         this.createNewOffice = this.createNewOffice.bind(this)
+        this.closeMessage = this.closeMessage.bind(this)
+
+        this.state = {
+            error: false
+        }
     }
 
     createNewOffice(e) {
@@ -22,14 +27,19 @@ class CreateOffice extends React.Component {
 
         if (name && latitude && longitude && startdate && company) {
             this.props.addOffice(office)
+            this.setState(() => ({ error: false }))
             e.target.elements.name.value = ''
             e.target.elements.latitude.value = ''
             e.target.elements.longitude.value = ''
             e.target.elements.startdate.value = ''
             e.target.elements.company.value = ''
         } else {
-            alert("Please fill up all the fields.")
+            this.setState(() => ({ error: true }))
         }
+    }
+
+    closeMessage() {
+        this.setState(() => ({ error: false }))
     }
 
 	render() {
@@ -75,6 +85,11 @@ class CreateOffice extends React.Component {
                             <Button warning>Create</Button>
                         </Control>
                     </Field>
+                    {
+                        this.state.error && (
+                            <Notification danger><Delete onClick={this.closeMessage} />Please fill up all the fields.</Notification>
+                        )
+                    }
                 </form>
             </div>
 		);

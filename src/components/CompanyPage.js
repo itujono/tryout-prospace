@@ -13,7 +13,7 @@ const CompanyPage = (props) => {
         <Section>
             <div>
                 <Title></Title>
-                <ul>
+                <ul className="company-details">
                     <li>
                         <h4>Address</h4>
                         {props.companies.address}
@@ -29,7 +29,7 @@ const CompanyPage = (props) => {
                 </ul>
                 <Link to="/"><Button>Back to Overview</Button></Link>
             </div>
-            <div>
+            <div className="office-container">
                 <Title>Offices</Title>
                 <Level className="office-list">
                     {
