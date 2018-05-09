@@ -33,3 +33,4 @@ Visit localhost to preview
 
 * Populating details on each company that gets selected/clicked
 * Form validation that is still pretty basic, actually
+* A confirmation box when about to delete item
