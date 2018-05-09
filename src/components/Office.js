@@ -7,7 +7,9 @@ const Office = (props) => {
         <Card className="office">
             <Card.Content>
                 <SubTitle className="darken">{props.office.name}</SubTitle>
-                <Delete onClick={() => props.removeOffice(props.index)} />
+                <Delete onClick={() => {
+                    if (confirm("You sure want to delete this office?")) props.removeOffice(props.index)
+                } } />
                 <ul>
                     <li>
                         <h4>Location</h4>

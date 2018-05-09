@@ -13,7 +13,9 @@ const Company = (props) => {
         <Card className="companies">
             <Card.Content>
                 <SubTitle className="darken">{props.company.name}</SubTitle>
-                <Delete onClick={() => props.removeCompany(props.index)} />
+                <Delete onClick={() => {
+                    if (confirm("You sure want to delete this company?")) props.removeCompany(props.index)
+                }} />
                 <ul>
                     <li>
                         <h4>Address</h4>
